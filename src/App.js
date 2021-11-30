@@ -4,7 +4,9 @@ import {useState} from "react"
 import SingleContent from './components/SingleContent';
 
 function App() {
+  // eslint-disable-next-line
   const[content,setContent] = useState(data)
+  
   return (
     <main>
       <div className="container">
@@ -12,6 +14,7 @@ function App() {
         <section>
           {content.map((data)=>{
             return <SingleContent key={data.id}{...data}/>
+          
           })}
         </section>
       </div>
